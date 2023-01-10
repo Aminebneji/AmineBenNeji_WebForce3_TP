@@ -1,0 +1,48 @@
+{% extends "baseAdmin.html.twig" %}
+{% block title %} categories {% endblock %}
+
+{% block body %}
+
+<h1 class="pb-5 text-light">Liste des Projets</h1>
+
+<table class="table table-dark table-hover text-light">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>Nom</th>
+            <th>date</th>
+            <th>end date</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for project in projects %}
+        <tr>
+            <td>{{loop.index}}</td>
+            <td class="text-start">
+                {% if project.img %}
+                <img class="pe-3" src="{{ asset('img/project/' ~ project.img) }}" alt="image de la catégorie   ">
+                {% endif %}
+                {{project.name}}
+            </td>
+            <td>{{project.date|date('Y-m')}}</td>
+            <td>{{project.endDate|date('Y-m')}}</td>
+            <td>
+                <a href=""><i class="bi bi-pencil-square text-primary"></i></a>
+                <a href="" onclick="return confirm ('êtes vous sûr de vouloir supprimer ce projet ?')"><i
+                        class="bi bi-trash3 text-danger"></i></a>
+            </td>
+        </tr>
+        {% else %}
+        <tr class="text-center">
+            <td colspan="4">Aucun projet trouvé</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<div class="text-end mt4">
+    <a href="{{ path('projectsCreate')}}" class="btn btn-success">Ajouter une catégorie</a>
+</div>
+
+{% endblock %}

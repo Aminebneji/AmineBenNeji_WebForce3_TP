@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: #323539;
+}
+
+
+
+main {
+    min-height: 15vh;
+}
+
+main a {
+    margin: 3%;
+}
+
+.home_head {
+    width: 100%;
+    height: 35vh;
+    max-height: 35vh;
+    background: url(../img/backgroundHead.jpg);
+    background-position: center;
+    background-size: 100%;
+}
+
+
+
+
+.name {
+    font-size: 70px;
+    position: absolute;
+    top: 29vh;
+    left: 5vh;
+    color: white;
+    background: none;
+}
+
+footer ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+
+footer #copyright p {
+    font-size: 0.75rem;
+}

@@ -1,0 +1,13 @@
+twig:
+    default_path: '%kernel.project_dir%/templates'
+    globals:
+        name: 'Amine Ben Neji'
+        adress: '64A Rue GMaertens'
+        zip: 59000
+        city: 'Lille'
+        job: 'Développeur Front'
+        phone: '0645315986'
+
+when@test:
+    twig:
+        strict_variables: true

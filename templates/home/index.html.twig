@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Home{% endblock %}
+
+{% block body %}
+
+{# compétences #}
+
+
+
+
+
+<div class="container">
+    <h1 class="pb-5 text-light">Mes Projets</h1>
+    <div class="row">
+        {% for project in projects %}
+        <div class="col-4">
+            <div class="card" style="width: 18rem;">
+                <img src="{{ asset('img/project/' ~ project.img) }}" class="card-img-top" alt="image du projet">
+                <div class="card-body">
+                    <h5 class="card-title">{{project.name}}</h5>
+                    <p class="card-text">{{project.description}}</p>
+                    <a href="#" class="btn btn-primary">Project</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{# à propos #}
+
+{% endblock %}
